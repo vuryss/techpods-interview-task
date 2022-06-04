@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="{{ asset('assets/css/calculator.css') }}" />
+    </head>
+    <body>
+        <h1>TechPods interview task</h1>
+        <div class="wrapper">
+            <div id="error-output"></div>
+            <input type="text" id="calculator-expression"/>
+            <div class="buttons-wrapper">
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button data-value="/">/</button>
+                <button data-value="4">4</button>
+                <button data-value="5">5</button>
+                <button data-value="6">6</button>
+                <button data-value="*">*</button>
+                <button data-value="1">1</button>
+                <button data-value="2">2</button>
+                <button data-value="3">3</button>
+                <button data-value="-">-</button>
+                <button data-value="0">0</button>
+                <button data-value=".">.</button>
+                <button id="calculate-result">=</button>
+                <button data-value="+">+</button>
+            </div>
+        </div>
+
+        <script src="{{ asset('assets/js/calculator.js') }}"></script>
+    </body>
+</html>
