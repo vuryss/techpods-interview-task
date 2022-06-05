@@ -126,6 +126,12 @@ class ParserTest extends TestCase
                     new NumberToken('5'),
                 ]),
             ],
+            'unexpected expression end' => [
+                'tokenList' => new TokenList([
+                    new NumberToken('34'),
+                    new OperatorToken('*'),
+                ]),
+            ],
         ];
     }
 

@@ -13,6 +13,8 @@ use App\Calculator\Token\NumberToken;
 use App\Calculator\Token\OperatorToken;
 use App\Calculator\Token\TokenList;
 
+use function assert;
+
 class Parser
 {
     private const BINARY_OPERATOR_PRECEDENCE = [
@@ -92,6 +94,8 @@ class Parser
             return new NumberNode($token->value());
         }
 
-        throw new SyntaxError(sprintf('Unexpected %s', $token::class));
+        assert($token === null);
+
+        throw new SyntaxError('Unexpected end of expression! Please provide complete arithmetic expression.');
     }
 }

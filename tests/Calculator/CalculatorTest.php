@@ -51,6 +51,10 @@ class CalculatorTest extends TestCase
                 'expression' => '5+*7',
                 'expectedError' => 'Unexpected operator *',
             ],
+            'unexpected expression end' => [
+                'expression' => '25/',
+                'expectedError' => 'Unexpected end of expression! Please provide complete arithmetic expression.',
+            ],
         ];
     }
 
